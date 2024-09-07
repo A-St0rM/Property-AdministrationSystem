@@ -6,11 +6,11 @@ public class Villa {
     private Tenant tenant;
 
 
-    public Villa() {
-        this.getAddress();
-        this.getArea();
-        this.getValue();
-        this.getDebt();
+    public Villa(String address, double area, double value, double debt, Tenant tenant) {
+        this.setAddress(address);
+        this.setArea(area);
+        this.setValue(value);
+        this.setDebt(debt);
     }
 
     public String getAddress() {

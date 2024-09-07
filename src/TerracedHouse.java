@@ -1,17 +1,17 @@
 public class TerracedHouse {
-    String address;
-    double area;
-    double value;
-    double debt;
-    Tenant tenant;
+    private String address;
+    private double area;
+    private double value;
+    private double debt;
+    private Tenant tenant;
 
 
 
-    public TerracedHouse() {
-        this.getAddress();
-        this.getArea();
-        this.getValue();
-        this.getDebt();
+    public TerracedHouse(String address, double area, double value, double debt, Tenant tenant) {
+        this.setArea(area);
+        this.setAddress(address);
+        this.setValue(value);
+        this.setDebt(debt);
     }
 
     public String getAddress() {

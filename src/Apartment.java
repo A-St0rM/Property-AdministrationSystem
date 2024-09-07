@@ -6,11 +6,11 @@ public class Apartment {
     private Tenant tenant;
 
 
-    public Apartment() {
-        this.getAddress();
-        this.getArea();
-        this.getValue();
-        this.getDebt();
+    public Apartment(String address, double area, double value, double debt, Tenant tenant) {
+        this.setAddress(address);
+        this.setArea(area);
+        this.setValue(value);
+        this.setDebt(debt);
     }
 
     public String getAddress() {
