@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 
 public class PropertyPortfolio {
-    Villa villa;
-    Apartment apartment;
-    TerracedHouse terracedHouse;
+
 
     ArrayList<Object> listOfAllProperties = new ArrayList<Object>();
 
