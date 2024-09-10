@@ -18,7 +18,7 @@ public interface Property {
 
     void setDebt(double debt);
 
-    Tenant setTenant(Tenant tenant);
+    void setTenant(Tenant tenant);
 
 
 }
