@@ -10,15 +10,15 @@ public interface Property {
 
     Tenant getTenant();
 
-    String setAddress();
+    void setAddress(String address);
 
-    double setArea();
+    void setArea(double area);
 
-    double setValue();
+    void setValue(double value);
 
-    double setDebt();
+    void setDebt(double debt);
 
-    Tenant setTenant();
+    Tenant setTenant(Tenant tenant);
 
 
 }

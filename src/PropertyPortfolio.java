@@ -3,19 +3,19 @@ import java.util.ArrayList;
 public class PropertyPortfolio {
 
 
-    ArrayList<Object> listOfAllProperties = new ArrayList<Object>();
+    ArrayList<Property> listOfAllProperties = new ArrayList<Property>();
 
     void addProperty(Object property){
 
-        listOfAllProperties.add(property);
+        listOfAllProperties.add();
     }
 
     void removeProperty(Object property){
 
-        listOfAllProperties.remove(property);
+        listOfAllProperties.remove();
     }
 
-    public ArrayList<Object> getListOfAllProperties() {
+    public ArrayList<Property> getListOfAllProperties() {
         return listOfAllProperties;
     }
 }
