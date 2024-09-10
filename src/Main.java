@@ -6,35 +6,37 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        PropertyPortfolio portfolio = new PropertyPortfolio();
-        Apartment apartment = new Apartment("Islev have 10", 70, 1.3, 0, new Tenant("Alissa", "140505", "Alissaalidib@hotmail.com"));
-        Tenant tenant;
+        PropertyPortfolio propertyPortfolio = new PropertyPortfolio();
+        Tenant tenant1 = new Tenant("Alissa", "140505", "Alissaalidib@hotmail.com");
+        Apartment apartment1 = new Apartment("Islev have 10", 70, 1.3, 0, tenant1);
+
 
         System.out.println("Welcome!");
         System.out.println(" 1: Property Portfolio");
         int choice = scanner.nextInt();
 
-        if(choice == 1) {
+        if (choice == 1) {
             System.out.println("Here is the list over your properties");
-            portfolio.getListOfAllProperties();
+            propertyPortfolio.getListOfAllProperties();
 
             System.out.println("Would you like to add/remove a property to the list?");
             System.out.println("1: Remove a property");
             System.out.println("2: Add a property");
 
-            if(choice == 1){
+            if (choice == 1) {
                 System.out.println("Which one would you like to add?");
-                System.out.println("1: apartment " + apartment);
-                System.out.println("2: Villa " + apartment);
-                portfolio.addProperty(apartment);
-            }
-            else if(choice == 2){
-                portfolio.removeProperty(apartment);
+                System.out.println("1: apartment " + apartment1.toString());
+                System.out.println("2: Villa ");
+//                propertyPortfolio.addProperty(apartment);
+//            } else if (choice == 2) {
+//                for (Property property1 : property.listOfAllProperties) ;
+//                {
+//                    System.out.println(property);
+//                }
             }
         }
 
 
-
-        }
+    }
 
     }

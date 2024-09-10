@@ -1,18 +1,22 @@
+
 import java.util.ArrayList;
 
-public class PropertyPortfolio {
+public class PropertyPortfolio  {
 
+    public PropertyPortfolio() {
+        this.listOfAllProperties = new ArrayList(); //HELP
+    }
 
     ArrayList<Property> listOfAllProperties = new ArrayList<Property>();
 
-    void addProperty(Object property){
+    void addProperty(Property property){ // Skal jeg have forklaring på
 
-        listOfAllProperties.add();
+        listOfAllProperties.add(property);
     }
 
-    void removeProperty(Object property){
+    void removeProperty(Property property){
 
-        listOfAllProperties.remove();
+        listOfAllProperties.remove(property);
     }
 
     public ArrayList<Property> getListOfAllProperties() {

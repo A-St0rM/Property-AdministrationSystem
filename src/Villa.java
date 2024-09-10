@@ -1,4 +1,4 @@
-public class Villa {
+public class Villa implements Property {
     private String address;
     private double area;
     private double value;
@@ -13,42 +13,52 @@ public class Villa {
         this.setDebt(debt);
     }
 
+    @Override
     public String getAddress() {
         return address;
     }
 
+    @Override
     public double getArea() {
         return area;
     }
 
+    @Override
     public double getValue() {
         return value;
     }
 
+    @Override
     public double getDebt() {
         return debt;
     }
 
+    @Override
     public Tenant getTenant() {
         return tenant;
     }
 
+    @Override
     public void setAddress(String address) {
         this.address = address;
     }
 
+    @Override
     public void setArea(double area) {
         this.area = area;
     }
 
+    @Override
     public void setValue(double value) {
         this.value = value;
     }
 
+    @Override
     public void setDebt(double debt) {
         this.debt = debt;
     }
 
+    @Override
     public void setTenant(Tenant tenant) {
         this.tenant = tenant;
     }
