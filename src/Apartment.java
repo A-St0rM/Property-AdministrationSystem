@@ -64,7 +64,7 @@ public class Apartment implements Property {
         this.tenant = tenant;
     }
 
-    public String ToString() {
+    public String toString() {
         return address + "\t" + area + "\t" + value + "\t" + debt + "\t" + tenant;
     }
 
