@@ -7,19 +7,25 @@ public class PropertyPortfolio  {
         this.listOfAllProperties = new ArrayList(); //HELP
     }
 
-    ArrayList<Property> listOfAllProperties = new ArrayList<Property>();
+    public ArrayList<Property> listOfAllProperties;
 
-    void addProperty(Property property){ // Skal jeg have forklaring på
+    public void addProperty(Property property){
 
         listOfAllProperties.add(property);
     }
 
-    void removeProperty(Property property){
+    public void removeProperty(Property property){
 
         listOfAllProperties.remove(property);
     }
 
     public ArrayList<Property> getListOfAllProperties() {
         return listOfAllProperties;
+    }
+
+    public void displayAllProperties(){
+        for(Property s : listOfAllProperties){
+            System.out.println(s);
+        }
     }
 }

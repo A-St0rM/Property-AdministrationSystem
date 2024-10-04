@@ -1,8 +1,15 @@
+import java.util.ArrayList;
+
 public class Tenant {
 
     private String name;
     private String cprNumber;
     private String email;
+
+    public Tenant() {
+
+    }
+
 
     public Tenant(String name, String cprNumber, String email) {
         this.setName(name);
@@ -39,5 +46,17 @@ public class Tenant {
     public String toString(){ // Returns a string that represents an object
 
         return name + " " + cprNumber + " " + email;
+    }
+
+    public void addTenants(){
+        ArrayList<Tenant> tenants = new ArrayList<>();
+
+        Tenant tenant1 = new Tenant("Alissa", "140505", "Alissaalidib@hotmail.com");
+        Tenant tenant2 = new Tenant("Jens", "1407199", "JensSøren@hotmail.com");
+
+
+        tenants.add(tenant1);
+        tenants.add(tenant2);
+
     }
 }
