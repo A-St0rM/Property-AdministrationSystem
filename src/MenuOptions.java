@@ -21,56 +21,45 @@ public final class MenuOptions {
         int choice = scanner.nextInt();
 
         if (choice == 1) {
-            System.out.println("Here is the list over your properties");
+            if (propertyPortfolio.getListOfAllProperties().size() > 0)
+                System.out.println("Here is the list over your properties");
+                propertyPortfolio.displayAllProperties();
         }
 
-        if(propertyPortfolio.getListOfAllProperties().size() == 0) {
-            System.out.println("There is currently no property in your portfolio");
-        }
-        else if(propertyPortfolio.getListOfAllProperties().size() > 0) {
-            propertyPortfolio.getListOfAllProperties();
+        else if(propertyPortfolio.getListOfAllProperties().size() == 0){
+            System.out.println("You have currently no properties");
         }
 
-        System.out.println("Would you like to add a property to the list? Or add a tenant to a property");
+
+        System.out.println("Would you like to add/remove a property to the list?");
         System.out.println("3: Add a property");
-        System.out.println("4: Add a tenant to a property");
+        System.out.println("4: Remove a property");
+        scanner.nextInt();
 
-        if (choice == 3) {
+        if (scanner.nextInt() == 3) {
             System.out.println("Which one would you like to add?");
             System.out.println("1: apartment");
             System.out.println("2: TerracedHouse");
             System.out.println("2: Villa");
-            int input = scanner.nextInt();
-            if(input == 1) {
+            scanner.nextInt();
 
+            if(scanner.nextInt() == 1) {
+
+                propertyPortfolio.displayAllProperties();
+                propertyPortfolio.addProperty(apartment1);
 
             }
 
-
-
         }
         else if (choice == 4) {
-            System.out.println("Which property would you like to add a tenant?");
+            System.out.println("Which property would you like remove?");
             propertyPortfolio.displayAllProperties();
             int input = scanner.nextInt();
-            propertyPortfolio.getListOfAllProperties().get(input).setTenant(tenant1);
+            propertyPortfolio.getListOfAllProperties().remove(input);
         }
     }
 
-    public static void createApartment() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter the address of the apartment: ");
-        String address = input.nextLine();
-        System.out.print("Enter the area of the apartment: ");
-        double area = input.nextDouble();
-        System.out.print("Enter the value of the apartment: ");
-        double value = input.nextDouble();
-        System.out.print("Enter the debt: ");
-        double debt = input.nextDouble();
-        System.out.print("which tenant would  ");
 
-        Apartment apartment = new Apartment(address, area, value, debt, Tenant tenant);
-    }
 
 }
 

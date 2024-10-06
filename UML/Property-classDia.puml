@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractList
+abstract AbstractCollection
+interface PropertyPortfolio
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+Main <|-- Property
+
+class Property {
+Object[] Apartment
+- double value
+- double debt
+- Tenant tenant
+ArrayList<
++ getValue()
+
+}
+
+class Main{
++ static void main(String[] args)
+
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+@enduml
