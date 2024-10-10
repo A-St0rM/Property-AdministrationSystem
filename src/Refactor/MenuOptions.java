@@ -69,6 +69,27 @@ public final class MenuOptions {
 
     }
 
+    public static Property setProperty(PropertyType type){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is the address of the property?");
+        String address = scanner.nextLine();
+
+        System.out.println("What is the area of the property?");
+        double area = scanner.nextDouble();
+
+        System.out.println("What is the value of the property?");
+        double value = scanner.nextDouble();
+
+        System.out.println("What is the rent of the property?");
+        double rent = scanner.nextDouble();
+
+        Property p = new Property(address, area, value, rent, type );
+
+        return p;
+
+    }
+
 
 
 }

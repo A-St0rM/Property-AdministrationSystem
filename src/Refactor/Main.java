@@ -6,7 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MenuOptions.displayMainMenu();
+        DbFunctions db = new DbFunctions();
+
+        db.connectToDb("PropertyManager","postgres","Ahlam1982");
+
+        //MenuOptions.displayMainMenu();
 
 
 
