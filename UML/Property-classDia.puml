@@ -16,11 +16,9 @@ AbstractList <|-- ArrayList
 Main <|-- Property
 
 class Property {
-Object[] Apartment
 - double value
 - double debt
 - Tenant tenant
-ArrayList<
 + getValue()
 
 }
@@ -30,10 +28,10 @@ class Main{
 
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+enum PropertyType {
+APARTMENT
+VILLA
+TERRACEDHOUSE
 }
 
 @enduml

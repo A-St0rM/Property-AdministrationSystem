@@ -1,17 +1,18 @@
+package Refactor;
+
 import java.util.ArrayList;
 
 public class Tenant {
 
     private String name;
-    private String cprNumber;
+    private int cprNumber;
     private String email;
 
     public Tenant() {
 
     }
 
-
-    public Tenant(String name, String cprNumber, String email) {
+    public Tenant(String name, int cprNumber, String email) {
         this.setName(name);
         this.setCprNumber(cprNumber);
         this.setEmail(email);
@@ -26,7 +27,7 @@ public class Tenant {
         return email;
     }
 
-    public String getCprNumber() {
+    public int getCprNumber() {
         return cprNumber;
     }
 
@@ -34,7 +35,7 @@ public class Tenant {
         this.name = name;
     }
 
-    public void setCprNumber(String cprNumber) {
+    public void setCprNumber(int cprNumber) {
         this.cprNumber = cprNumber;
     }
 
@@ -48,15 +49,10 @@ public class Tenant {
         return name + " " + cprNumber + " " + email;
     }
 
-    public void addTenants(){
+    public void addTenants(Tenant tenant){
         ArrayList<Tenant> tenants = new ArrayList<>();
 
-        Tenant tenant1 = new Tenant("Alissa", "140505", "Alissaalidib@hotmail.com");
-        Tenant tenant2 = new Tenant("Jens", "1407199", "JensSøren@hotmail.com");
-
-
-        tenants.add(tenant1);
-        tenants.add(tenant2);
+        tenants.add(tenant);
 
     }
 }
