@@ -1,4 +1,5 @@
 package Refactor;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,8 +9,8 @@ public class Main {
 
         DbFunctions db = new DbFunctions();
 
-        db.connectToDb("PropertyManager","postgres","Ahlam1982");
-
+        Connection connection = db.connectToDb("PropertyManager","postgres","Ahlam1982");
+        db.createTable(connection,"property");
         //MenuOptions.displayMainMenu();
 
 
